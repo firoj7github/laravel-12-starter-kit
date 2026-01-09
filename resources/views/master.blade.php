@@ -273,5 +273,17 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+
+        @include('partials.toaster');
+
+        <script>
+        window.Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+        });
+    </script>
     </body>
 </html>
